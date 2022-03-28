@@ -17,8 +17,3 @@ initdb -D /workspace/.pgsql/data
 ```bash 
 pg_ctl -D /workspace/.pgsql/data -l ~/.pg_ctl/log -o "-k ~/.pg_ctl/sockets" start
 ```
-
-### todo
-- [ ] Script for php.ini
-- [ ] Script for .env 
-- [ ] Step/Script to install postgresql 
