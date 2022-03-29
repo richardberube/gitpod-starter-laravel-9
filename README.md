@@ -1,19 +1,31 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# PHP8.1 - PostgreSQL 14
+
+## What is in this repo
+- php8.1 from ppa:ondrej/php
+- php8.1 extensions:
+  - php8.1-bcmath
+  - php8.1-curl
+  - php8.1-xml
+  - php8.1-mbstring
+- Composer from [getcomposer](https://getcomposer.org/installer)
+- PostgreSQL 14 from official [site](https://www.postgresql.org/download/linux/debian/)
 
 
-## Create folder for postgres
+## How to use this repo
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/richardberube/gitpod-starter-laravel-9)
+
+Run this command to create your laravel 9 project
 ```bash
-sudo -p ~/.pg_ctl/sockets
-sudo mkdir -p /workspace/.pgsql/data
-sudo chown gitpod /workspace/.pgsql -R
+composer create-project laravel/laravel example-app
 ```
 
-## Init database cluster on local workspace
-```bash
-initdb -D /workspace/.pgsql/data
-```
+## Custom postgres command
 
-## Start postgres
-```bash 
-pg_ctl -D /workspace/.pgsql/data -l ~/.pg_ctl/log -o "-k ~/.pg_ctl/sockets" start
-```
+Start PostgreSQL server: ```pg_start```
+
+Stop PostgreSQL Server: ```pg_stop```
+
+## Ressources used to create this starter template
+- [Gitpod Docs](https://www.gitpod.io/docs)
+- [Gitpod PostgreSQL chunk (docker)](https://github.com/gitpod-io/workspace-images/blob/c7f51c5be795011b7778420361a2d7e92c09db3b/chunks/tool-postgresql/Dockerfile)
